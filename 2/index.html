@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme de Renforcement Mental Anti-Anxiété</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Emergency Button (Fixed) -->
+    <button id="emergencyBtn" class="emergency-btn" aria-label="Aide d'urgence">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span>Urgence</span>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>MentalBoost</span>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Accueil</a>
+                    <a href="#program" class="nav-link">Programme</a>
+                    <a href="#journal" class="nav-link">Journal</a>
+                    <a href="#nutrition" class="nav-link">Nutrition</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn--outline btn--sm" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Programme de Renforcement Mental Anti-Anxiété</h1>
+                    <p class="hero-subtitle">Développez une résistance durable au stress et prévenez les crises de panique</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Semaines</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Phases</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Exercices</div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" id="startProgram">
+                            <i class="fas fa-play"></i>
+                            Commencer le programme
+                        </button>
+                        <button class="btn btn--outline btn--lg" id="learnMore">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="breathing-animation">
+                            <div class="breath-circle"></div>
+                        </div>
+                        <p>Respiration guidée</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Timeline -->
+    <section id="program" class="program">
+        <div class="container">
+            <div class="section-header">
+                <h2>Votre parcours en 4 phases</h2>
+                <p>Un programme progressif adapté à votre rythme</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-phase="1">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <div class="phase-card">
+                            <div class="phase-header" style="background: var(--color-bg-1);">
+                                <h3>Fondations</h3>
+                                <span class="phase-duration">Semaines 1-3</span>
+                            </div>
+                            <div class="phase-body">
+                                <p>Construire les bases essentielles</p>
+                                <div class="phase-exercises">
+                                    <div class="exercise-item">
+                                        <i class="fas fa-lungs"></i>
+                                        <span>Respiration diaphragmatique</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="breathing" data-duration="300">
+                                            5min
+                                        </button>
+                                    </div>
+                                    <div class="exercise-item">
+                                        <i class="fas fa-wind"></i>
+                                        <span>Technique 4-7-8</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="breathing478" data-duration="240">
+                                            4min
+                                        </button>
+                                    </div>
+                                    <div class="exercise-item">
+                                        <i class="fas fa-om"></i>
+                                        <span>Méditation de pleine conscience</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="meditation" data-duration="600">
+                                            10min
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-phase="2">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <div class="phase-card">
+                            <div class="phase-header" style="background: var(--color-bg-3);">
+                                <h3>Développement</h3>
+                                <span class="phase-duration">Semaines 4-6</span>
+                            </div>
+                            <div class="phase-body">
+                                <p>Approfondir les techniques</p>
+                                <div class="phase-exercises">
+                                    <div class="exercise-item">
+                                        <i class="fas fa-dumbbell"></i>
+                                        <span>Relaxation Progressive</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="progressive" data-duration="900">
+                                            15min
+                                        </button>
+                                    </div>
+                                    <div class="exercise-item">
+                                        <i class="fas fa-meditation"></i>
+                                        <span>Méditation étendue</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="extended" data-duration="900">
+                                            15min
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-phase="3">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <div class="phase-card">
+                            <div class="phase-header" style="background: var(--color-bg-2);">
+                                <h3>Consolidation</h3>
+                                <span class="phase-duration">Semaines 7-9</span>
+                            </div>
+                            <div class="phase-body">
+                                <p>Renforcer et structurer</p>
+                                <div class="phase-exercises">
+                                    <div class="exercise-item">
+                                        <i class="fas fa-brain"></i>
+                                        <span>Restructuration Cognitive</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="cognitive" data-duration="1200">
+                                            20min
+                                        </button>
+                                    </div>
+                                    <div class="exercise-item">
+                                        <i class="fas fa-stairs"></i>
+                                        <span>Exposition Progressive</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="exposure" data-duration="1800">
+                                            30min
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-phase="4">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <div class="phase-card">
+                            <div class="phase-header" style="background: var(--color-bg-7);">
+                                <h3>Maîtrise</h3>
+                                <span class="phase-duration">Semaines 10-12</span>
+                            </div>
+                            <div class="phase-body">
+                                <p>Perfectionnement et autonomie</p>
+                                <div class="phase-exercises">
+                                    <div class="exercise-item">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <span>Biofeedback et Visualisation</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="biofeedback" data-duration="1200">
+                                            20min
+                                        </button>
+                                    </div>
+                                    <div class="exercise-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Gestion Proactive</span>
+                                        <button class="btn btn--sm btn--outline exercise-btn" data-exercise="proactive" data-duration="900">
+                                            15min
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journal Section -->
+    <section id="journal" class="journal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Journal de suivi</h2>
+                <p>Suivez votre progression quotidienne</p>
+            </div>
+            
+            <div class="journal-content">
+                <div class="journal-card">
+                    <h3>Comment vous sentez-vous aujourd'hui ?</h3>
+                    
+                    <div class="mood-tracker">
+                        <div class="rating-group">
+                            <label>Niveau d'anxiété</label>
+                            <div class="anxiety-slider">
+                                <input type="range" id="anxietyLevel" min="0" max="10" value="5">
+                                <div class="slider-labels">
+                                    <span>Calme</span>
+                                    <span id="anxietyValue">5</span>
+                                    <span>Très anxieux</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rating-group">
+                            <label>Qualité du sommeil</label>
+                            <div class="star-rating" data-rating="sleep">
+                                <i class="fas fa-star" data-value="1"></i>
+                                <i class="fas fa-star" data-value="2"></i>
+                                <i class="fas fa-star" data-value="3"></i>
+                                <i class="fas fa-star" data-value="4"></i>
+                                <i class="fas fa-star" data-value="5"></i>
+                            </div>
+                        </div>
+
+                        <div class="rating-group">
+                            <label>Niveau d'énergie</label>
+                            <div class="star-rating" data-rating="energy">
+                                <i class="fas fa-star" data-value="1"></i>
+                                <i class="fas fa-star" data-value="2"></i>
+                                <i class="fas fa-star" data-value="3"></i>
+                                <i class="fas fa-star" data-value="4"></i>
+                                <i class="fas fa-star" data-value="5"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journal-entry">
+                        <label for="journalText">Notes personnelles</label>
+                        <textarea id="journalText" class="form-control" rows="4" placeholder="Comment s'est passée votre journée ? Qu'avez-vous ressenti ?"></textarea>
+                    </div>
+
+                    <div class="journal-actions">
+                        <button class="btn btn--primary" id="saveJournal">
+                            <i class="fas fa-save"></i>
+                            Enregistrer
+                        </button>
+                        <button class="btn btn--outline" id="exportData">
+                            <i class="fas fa-download"></i>
+                            Exporter mes données
+                        </button>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <h3>Vos progrès cette semaine</h3>
+                    <div class="progress-stats">
+                        <div class="progress-item">
+                            <div class="progress-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="progress-info">
+                                <span class="progress-number" id="completedExercises">12</span>
+                                <span class="progress-label">Exercices terminés</span>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="progress-info">
+                                <span class="progress-number" id="currentStreak">7</span>
+                                <span class="progress-label">Jours de suite</span>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="progress-info">
+                                <span class="progress-number" id="averageAnxiety">3.2</span>
+                                <span class="progress-label">Anxiété moyenne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Section -->
+    <section id="nutrition" class="nutrition">
+        <div class="container">
+            <div class="section-header">
+                <h2>Soutien Nutritionnel Anti-Stress</h2>
+                <p>Une alimentation qui favorise votre bien-être mental</p>
+            </div>
+
+            <div class="nutrition-content">
+                <div class="nutrition-card good">
+                    <div class="nutrition-header">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h3>Aliments à privilégier</h3>
+                    </div>
+                    <div class="nutrition-categories">
+                        <div class="nutrition-category">
+                            <h4>Oméga-3 <small>(<a href="https://www.lysi-france.com/blogs/sante/stress-anxiete-humeurs-omega-3" target="_blank">source</a>)</small></h4>
+                            <ul>
+                                <li>Saumon, sardines, maquereau</li>
+                                <li>Graines de lin et de chia</li>
+                                <li>Noix et huile de noix</li>
+                                <li>Avocat</li>
+                            </ul>
+                        </div>
+                        <div class="nutrition-category">
+                            <h4>Magnésium <small>(<a href="https://www.nationalgeographic.fr/sciences/medecine-sante-magnesium-bienfaits-et-limites-de-la-supplementation-avis-experts" target="_blank">source</a>)</small></h4>
+                            <ul>
+                                <li>Épinards et légumes verts feuillus</li>
+                                <li>Amandes et graines de citrouille</li>
+                                <li>Chocolat noir (70% minimum)</li>
+                                <li>Légumineuses (lentilles, haricots)</li>
+                            </ul>
+                        </div>
+                        <div class="nutrition-category">
+                            <h4>Vitamines B <small>(<a href="https://www.lmde.fr/blog/sante-bien-etre/quelle-alimentation-pour-mieux-gerer-mon-stress/" target="_blank">source</a>)</small></h4>
+                            <ul>
+                                <li>Céréales complètes (avoine, riz complet)</li>
+                                <li>Bananes</li>
+                                <li>Poissons et volailles</li>
+                                <li>Œufs</li>
+                            </ul>
+                        </div>
+                        <div class="nutrition-category">
+                            <h4>Antioxydants <small>(<a href="https://www.nationalgeographic.fr/sciences/sante-mentale-alimentation-nutrition-les-meilleurs-aliments-pour-lutter-contre-le-stress" target="_blank">source</a>)</small></h4>
+                            <ul>
+                                <li>Myrtilles et fruits rouges</li>
+                                <li>Thé vert</li>
+                                <li>Agrumes</li>
+                                <li>Légumes colorés (brocolis, poivrons)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nutrition-card avoid">
+                    <div class="nutrition-header">
+                        <i class="fas fa-thumbs-down"></i>
+                        <h3>Aliments à éviter</h3>
+                    </div>
+                    <ul class="avoid-list">
+                        <li><strong>Sucre raffiné et aliments transformés</strong> - Provoquent des pics de glycémie et augmentent le cortisol <small>(<a href="https://www.toutelanutrition.com/wikifit/sante/conseil/la-consommation-reguliere-de-sucre-et-pain-blanc-liee-la-depression" target="_blank">source</a>)</small></li>
+                        <li><strong>Caféine excessive</strong> - Stimule la production d'hormones de stress <small>(<a href="https://www.qare.fr/sante/alimentation-saine/stress-les-aliments-a-eviter/" target="_blank">source</a>)</small></li>
+                        <li><strong>Alcool</strong> - Perturbe le sommeil et aggrave l'anxiété <small>(<a href="https://www.lmde.fr/blog/sante-bien-etre/quelle-alimentation-pour-mieux-gerer-mon-stress/" target="_blank">source</a>)</small></li>
+                        <li><strong>Aliments ultra-transformés</strong> - Associés à un risque accru d'anxiété et de dépression <small>(<a href="https://www.larevuedupraticien.fr/article/nutrition-et-sante-mentale" target="_blank">source</a>)</small></li>
+                        <li><strong>Graisses saturées en excès</strong> - Peuvent augmenter l'inflammation et l'anxiété <small>(<a href="https://www.santemagazine.fr/actualites/actualites-alimentation/ce-regime-peut-vous-rendre-plus-anxieux-selon-une-etude-1092892" target="_blank">source</a>)</small></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercise Timer Modal -->
+    <div id="timerModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="exerciseTitle">Exercice de respiration</h3>
+                <button class="modal-close" id="closeTimer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="timer-display">
+                    <div class="timer-circle">
+                        <div class="timer-text">
+                            <div id="timerMinutes">05</div>
+                            <div id="timerSeconds">00</div>
+                        </div>
+                        <svg class="timer-progress" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" class="timer-track"></circle>
+                            <circle cx="50" cy="50" r="45" class="timer-fill" id="timerCircle"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timer-controls">
+                    <button class="btn btn--outline" id="pauseTimer">
+                        <i class="fas fa-pause"></i>
+                        Pause
+                    </button>
+                    <button class="btn btn--primary" id="startTimer">
+                        <i class="fas fa-play"></i>
+                        Commencer
+                    </button>
+                    <button class="btn btn--outline" id="stopTimer">
+                        <i class="fas fa-stop"></i>
+                        Arrêter
+                    </button>
+                </div>
+                <div class="exercise-instructions" id="exerciseInstructions">
+                    <h4>Instructions :</h4>
+                    <ol id="instructionsList"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Modal -->
+    <div id="emergencyModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content emergency-modal">
+            <div class="modal-header emergency-header">
+                <h3>Intervention d'Urgence</h3>
+                <button class="modal-close" id="closeEmergency">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="emergency-steps">
+                    <div class="emergency-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Respiration d'urgence</h4>
+                            <p>Technique 4-7-8 immédiate</p>
+                            <button class="btn btn--primary emergency-timer" data-duration="240">
+                                <i class="fas fa-play"></i>
+                                Commencer (4 min)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="emergency-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Ancrage 5-4-3-2-1</h4>
+                            <p>5 choses que je vois, 4 que j'entends, 3 que je touche, 2 que je sens, 1 que je goûte</p>
+                            <button class="btn btn--outline step-complete">Fait ✓</button>
+                        </div>
+                    </div>
+                    <div class="emergency-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Position de sécurité</h4>
+                            <p>Asseyez-vous ou allongez-vous dans un endroit sûr</p>
+                            <button class="btn btn--outline step-complete">Fait ✓</button>
+                        </div>
+                    </div>
+                    <div class="emergency-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Contacts d'urgence</h4>
+                            <p>Appelez un proche ou une ligne d'écoute si nécessaire</p>
+                            <div class="emergency-contacts">
+                                <a href="tel:3114" class="btn btn--primary">
+                                    <i class="fas fa-phone"></i>
+                                    3114 (Numéro national français)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
